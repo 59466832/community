@@ -24,7 +24,7 @@ target/
 /nbbuild/
 /dist/
 /nbdist/
-/.nb-gradle/
+/.nb-gGitstradle/
 build/
 
 ### VS Code ###
