@@ -1,7 +1,7 @@
 package com.xincdata.community.community.controller;
 
 import com.xincdata.community.community.dto.AccessTokenDTO;
-import com.xincdata.community.community.dto.GithubUser;
+import com.xincdata.community.community.dto.GithubUserBase;
 import com.xincdata.community.community.provider.GithubProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,7 +35,7 @@ public class AuthorizeController {
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
 
 
-        GithubUser user = githubProvider.getUser(accessToken);
+        GithubUserBase user = githubProvider.getUser(accessToken);
         System.out.println(user.getName());
         System.out.println(user.getId());
         System.out.println(user.getBio());

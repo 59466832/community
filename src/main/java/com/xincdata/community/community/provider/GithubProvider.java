@@ -2,13 +2,11 @@ package com.xincdata.community.community.provider;
 
 import com.alibaba.fastjson.JSON;
 import com.xincdata.community.community.dto.AccessTokenDTO;
-import com.xincdata.community.community.dto.GithubUser;
+import com.xincdata.community.community.dto.GithubUserBase;
 import okhttp3.*;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-
-import static com.sun.xml.internal.ws.api.message.Packet.Status.Request;
 
 @Component
 public class GithubProvider {
@@ -32,7 +30,7 @@ public class GithubProvider {
         return null;
     }
 
-    public GithubUser getUser(String accessToken){
+    public GithubUserBase getUser(String accessToken){
         OkHttpClient client = new OkHttpClient();
         String url = "https://api.github.com/user?access_token=";
         Request request = new Request.Builder()
@@ -41,7 +39,7 @@ public class GithubProvider {
         try {
             Response response = client.newCall(request).execute();
             String string = response.body().string();
-            GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
+            GithubUserBase githubUser = JSON.parseObject(string, GithubUserBase.class);
             return githubUser;
         } catch (IOException e) {
             e.printStackTrace();

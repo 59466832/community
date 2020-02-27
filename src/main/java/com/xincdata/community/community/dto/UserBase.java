@@ -1,12 +1,12 @@
 package com.xincdata.community.community.dto;
 
 /**
- * @Classname GithubUser
+ * @Classname User
  * @Description TODO
- * @Date 2020/2/26 9:51 下午
+ * @Date 2020/2/27 1:30 下午
  * @Created by lucky
  */
-public class GithubUser {
+public class UserBase {
     private String name;
     private Long id;
     private String bio;
