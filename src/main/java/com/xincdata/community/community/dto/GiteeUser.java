@@ -6,5 +6,5 @@ package com.xincdata.community.community.dto;
  * @Date 2020/2/27 1:27 下午
  * @Created by lucky
  */
-public class GiteeUserBase extends UserBase {
+public class GiteeUser extends UserBase {
 }

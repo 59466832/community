@@ -6,6 +6,6 @@ package com.xincdata.community.community.dto;
  * @Date 2020/2/26 9:51 下午
  * @Created by lucky
  */
-public class GithubUserBase extends UserBase {
+public class GithubUser extends UserBase {
 
 }
